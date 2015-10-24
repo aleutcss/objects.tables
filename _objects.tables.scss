@@ -2,6 +2,26 @@
     #TABLES
 \*------------------------------------*/
 
+/**
+ *  Some useful helpers for common table patterns e.g.:
+ *
+	<table class="o-table o-table--fixed o-table--cells">
+	<thead>
+		<tr>
+			<th>Foo</th>
+			<th>Bar</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Foo</td>
+			<td>Bar</td>
+		</tr>
+	</table>
+ *
+ * Extend this object in your components.
+ */
+
 // Predefine the variables below in order to alter and enable specific features.
 $inuit-table-namespace:         $inuit-namespace !default;
 
@@ -25,8 +45,8 @@ $inuit-enable-table--columns:   false !default;
 
 
 
-.#{$inuit-table-namespace}table,
-%#{$inuit-table-namespace}table {
+.#{$inuit-table-namespace}o-table,
+%#{$inuit-table-namespace}o-table {
     width: 100%;
 }
 
@@ -39,8 +59,8 @@ $inuit-enable-table--columns:   false !default;
     /**
      * Force tables into having equal-width columns.
      */
-    .#{$inuit-table-namespace}table--fixed,
-    %#{$inuit-table-namespace}table--fixed {
+    .#{$inuit-table-namespace}o-table--fixed,
+    %#{$inuit-table-namespace}o-table--fixed {
         table-layout: fixed;
     }
 
@@ -55,14 +75,14 @@ $inuit-enable-table--columns:   false !default;
     /**
      * Tables with very tightly packed cells.
      */
-    .#{$inuit-table-namespace}table--compact,
-    %#{$inuit-table-namespace}table--compact {
-    
+    .#{$inuit-table-namespace}o-table--compact,
+    %#{$inuit-table-namespace}o-table--compact {
+
         th,
         td {
             padding: $inuit-table-padding--compact;
         }
-    
+
     }
 
 }
@@ -76,14 +96,14 @@ $inuit-enable-table--columns:   false !default;
     /**
      * Lightly packed cells.
      */
-    .#{$inuit-table-namespace}table--cosy,
-    %#{$inuit-table-namespace}table--cosy {
-    
+    .#{$inuit-table-namespace}o-table--cosy,
+    %#{$inuit-table-namespace}o-table--cosy {
+
         th,
         td {
             padding: $inuit-table-padding--cosy;
         }
-    
+
     }
 
 }
@@ -97,14 +117,14 @@ $inuit-enable-table--columns:   false !default;
     /**
      * Tables with very widely padded cells.
      */
-    .#{$inuit-table-namespace}table--comfy,
-    %#{$inuit-table-namespace}table--comfy {
-    
+    .#{$inuit-table-namespace}o-table--comfy,
+    %#{$inuit-table-namespace}o-table--comfy {
+
         th,
         td {
             padding: $inuit-table-padding--comfy;
         }
-    
+
     }
 
 }
@@ -118,14 +138,14 @@ $inuit-enable-table--columns:   false !default;
     /**
      * Add borders around a `table`.
      */
-    .#{$inuit-table-namespace}table--cells,
-    %#{$inuit-table-namespace}table--cells {
-    
+    .#{$inuit-table-namespace}o-table--cells,
+    %#{$inuit-table-namespace}o-table--cells {
+
         th,
         td {
             border: $inuit-table-border-width $inuit-table-border-style $inuit-table-border-color;
         }
-    
+
     }
 
 }
@@ -139,21 +159,21 @@ $inuit-enable-table--columns:   false !default;
     /**
      * Add borders only to `table`’s rows.
      */
-    .#{$inuit-table-namespace}table--rows,
-    %#{$inuit-table-namespace}table--rows {
-    
+    .#{$inuit-table-namespace}o-table--rows,
+    %#{$inuit-table-namespace}o-table--rows {
+
         &,
         th,
         td {
             border: 0 $inuit-table-border-style $inuit-table-border-color;
         }
-    
+
     }
-    
-    .#{$inuit-table-namespace}table--rows,
-    %#{$inuit-table-namespace}table--rows {
+
+    .#{$inuit-table-namespace}o-table--rows,
+    %#{$inuit-table-namespace}o-table--rows {
         border-top-width: $inuit-table-border-width;
-    
+
         th,
         td {
             border-bottom-width: $inuit-table-border-width;
@@ -171,20 +191,20 @@ $inuit-enable-table--columns:   false !default;
     /**
      * Add borders only to `table`’s columns.
      */
-    .#{$inuit-table-namespace}table--columns,
-    %#{$inuit-table-namespace}table--columns {
-    
+    .#{$inuit-table-namespace}o-table--columns,
+    %#{$inuit-table-namespace}o-table--columns {
+
         &,
         th,
         td {
             border: 0 $inuit-table-border-style $inuit-table-border-color;
         }
     }
-    
-    .#{$inuit-table-namespace}table--columns,
-    %#{$inuit-table-namespace}table--columns {
+
+    .#{$inuit-table-namespace}o-table--columns,
+    %#{$inuit-table-namespace}o-table--columns {
         border-left-width: $inuit-table-border-width;
-    
+
         th,
         td {
             border-right-width: $inuit-table-border-width;
