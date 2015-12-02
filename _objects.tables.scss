@@ -23,22 +23,21 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
+$o-table-padding--compact:  quarter($spacing) !default;
+$o-table-padding--cosy:     halve($spacing) !default;
+$o-table-padding--comfy:    $spacing !default;
 
-$inuit-table-padding--compact:  quarter($spacing) !default;
-$inuit-table-padding--cosy:     halve($spacing) !default;
-$inuit-table-padding--comfy:    $spacing !default;
+$o-table-border-width:      1px !default;
+$o-table-border-style:      solid !default;
+$o-table-border-color:      #ccc !default;
 
-$inuit-table-border-width:      1px !default;
-$inuit-table-border-style:      solid !default;
-$inuit-table-border-color:      #ccc !default;
-
-$inuit-enable-table--fixed:     false !default;
-$inuit-enable-table--compact:   false !default;
-$inuit-enable-table--cosy:      false !default;
-$inuit-enable-table--comfy:     false !default;
-$inuit-enable-table--cells:     false !default;
-$inuit-enable-table--rows:      false !default;
-$inuit-enable-table--columns:   false !default;
+$o-table--fixed:     false !default;
+$o-table--compact:   false !default;
+$o-table--cosy:      false !default;
+$o-table--comfy:     false !default;
+$o-table--cells:     false !default;
+$o-table--rows:      false !default;
+$o-table--columns:   false !default;
 
 
 
@@ -52,7 +51,7 @@ $inuit-enable-table--columns:   false !default;
 
 
 
-@if ($inuit-enable-table--fixed == true) {
+@if ($o-table--fixed == true) {
 
     /**
      * Force tables into having equal-width columns.
@@ -67,7 +66,7 @@ $inuit-enable-table--columns:   false !default;
 
 
 
-@if ($inuit-enable-table--compact == true) {
+@if ($o-table--compact == true) {
 
     /**
      * Tables with very tightly packed cells.
@@ -76,7 +75,7 @@ $inuit-enable-table--columns:   false !default;
 
         th,
         td {
-            padding: $inuit-table-padding--compact;
+            padding: $o-table-padding--compact;
         }
 
     }
@@ -87,7 +86,7 @@ $inuit-enable-table--columns:   false !default;
 
 
 
-@if ($inuit-enable-table--cosy == true) {
+@if ($o-table--cosy == true) {
 
     /**
      * Lightly packed cells.
@@ -96,7 +95,7 @@ $inuit-enable-table--columns:   false !default;
 
         th,
         td {
-            padding: $inuit-table-padding--cosy;
+            padding: $o-table-padding--cosy;
         }
 
     }
@@ -107,7 +106,7 @@ $inuit-enable-table--columns:   false !default;
 
 
 
-@if ($inuit-enable-table--comfy == true) {
+@if ($o-table--comfy == true) {
 
     /**
      * Tables with very widely padded cells.
@@ -116,7 +115,7 @@ $inuit-enable-table--columns:   false !default;
 
         th,
         td {
-            padding: $inuit-table-padding--comfy;
+            padding: $o-table-padding--comfy;
         }
 
     }
@@ -127,7 +126,7 @@ $inuit-enable-table--columns:   false !default;
 
 
 
-@if ($inuit-enable-table--cells == true) {
+@if ($o-table--cells == true) {
 
     /**
      * Add borders around a `table`.
@@ -136,7 +135,7 @@ $inuit-enable-table--columns:   false !default;
 
         th,
         td {
-            border: $inuit-table-border-width $inuit-table-border-style $inuit-table-border-color;
+            border: $o-table-border-width $o-table-border-style $o-table-border-color;
         }
 
     }
@@ -147,7 +146,7 @@ $inuit-enable-table--columns:   false !default;
 
 
 
-@if ($inuit-enable-table--rows == true) {
+@if ($o-table--rows == true) {
 
     /**
      * Add borders only to `table`’s rows.
@@ -157,17 +156,17 @@ $inuit-enable-table--columns:   false !default;
         &,
         th,
         td {
-            border: 0 $inuit-table-border-style $inuit-table-border-color;
+            border: 0 $o-table-border-style $o-table-border-color;
         }
 
     }
 
     .o-table--rows {
-        border-top-width: $inuit-table-border-width;
+        border-top-width: $o-table-border-width;
 
         th,
         td {
-            border-bottom-width: $inuit-table-border-width;
+            border-bottom-width: $o-table-border-width;
         }
     }
 
@@ -177,7 +176,7 @@ $inuit-enable-table--columns:   false !default;
 
 
 
-@if ($inuit-enable-table--columns == true) {
+@if ($o-table--columns == true) {
 
     /**
      * Add borders only to `table`’s columns.
@@ -187,16 +186,16 @@ $inuit-enable-table--columns:   false !default;
         &,
         th,
         td {
-            border: 0 $inuit-table-border-style $inuit-table-border-color;
+            border: 0 $o-table-border-style $o-table-border-color;
         }
     }
 
     .o-table--columns {
-        border-left-width: $inuit-table-border-width;
+        border-left-width: $o-table-border-width;
 
         th,
         td {
-            border-right-width: $inuit-table-border-width;
+            border-right-width: $o-table-border-width;
         }
     }
 
