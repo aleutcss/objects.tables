@@ -24,9 +24,9 @@
 
 // Predefine the variables below in order to alter and enable specific features.
 
-$inuit-table-padding--compact:  quarter($inuit-base-spacing-unit) !default;
-$inuit-table-padding--cosy:     halve($inuit-base-spacing-unit) !default;
-$inuit-table-padding--comfy:    $inuit-base-spacing-unit !default;
+$inuit-table-padding--compact:  quarter($spacing) !default;
+$inuit-table-padding--cosy:     halve($spacing) !default;
+$inuit-table-padding--comfy:    $spacing !default;
 
 $inuit-table-border-width:      1px !default;
 $inuit-table-border-style:      solid !default;
