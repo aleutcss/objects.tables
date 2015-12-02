@@ -1,5 +1,5 @@
 {
-  "name": "aleut-tables",
+  "name": "@aleut/aleut-tables",
   "version": "0.3.0",
   "description": "Simple tables objects for the aleutcss framework (based on Harry Roberts inuitcss framework)",
   "main": "_objects.tables.scss",
