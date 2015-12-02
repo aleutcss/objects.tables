@@ -1,26 +1,32 @@
 {
-  "name": "inuit-tables",
-  "version": "0.2.1",
-  "description": "Simple tables objects for the inuitcss framework.",
+  "name": "aleut-tables",
+  "version": "0.3.0",
+  "description": "Simple tables objects for the aleutcss framework (based on Harry Roberts inuitcss framework)",
   "main": "_objects.tables.scss",
   "repository": {
     "type": "git",
-    "url": "https://github.com/inuitcss/objects.tables.git"
+    "url": "https://github.com/aleutcss/objects.tables.git"
   },
-  "author": "Harry Roberts <harry@csswizardry.com>",
-  "license": "Apache 2",
+  "contributors": [
+    {"name": "Marius Hauken", "url": "http://twitter.com/mhauken", "email": "hauken@netliferesearch.com"},
+    {"name": "Robin Sandborg", "url": "http://twitter.com/robrobro", "email": "robin@netliferesearch.com"},
+    {"name": "Knut Melvær", "url": "http://twitter.com/kmelve", "email": "knut@netliferesearch.com"},
+    {"name": "Harry Roberts", "email": "harry@csswizardry.com"}
+  ],
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/inuitcss/objects.tables/issues"
+    "url": "https://github.com/aleutcss/objects.tables/issues"
   },
-  "homepage": "https://github.com/inuitcss/objects.tables",
+  "homepage": "https://github.com/aleutcss/objects.tables",
   "keywords": [
-    "inuitcss",
+    "aleutcss",
+    "aleut",
     "oocss",
     "css"
   ],
   "dependencies": {
-    "inuit-defaults": "~0.2.0",
-    "inuit-functions": "~0.2.0",
-    "inuit-normalize": "~3.0.1"
+    "@aleut/aleut-defaults": "~0.3.0",
+    "@aleut/aleut-functions": "~0.3.0",
+    "@aleut/aleut-normalize": "~4.0.0"
   }
 }
