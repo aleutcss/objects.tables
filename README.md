@@ -1,6 +1,6 @@
 # The tables objects
 
-inuitcss has some useful helpers for common table patterns.
+aleutcss has some useful helpers for common table patterns.
 
 Install using Bower:
 
