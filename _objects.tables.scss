@@ -23,18 +23,18 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
-$o-table-padding--compact:  quarter($spacing) !default;
-$o-table-padding--cosy:     halve($spacing) !default;
-$o-table-padding--comfy:    $spacing !default;
+$o-table-padding--tiny:  	quarter($spacing) !default;
+$o-table-padding--small:    halve($spacing) !default;
+$o-table-padding:    		$spacing !default;
 
 $o-table-border-width:      1px !default;
 $o-table-border-style:      solid !default;
 $o-table-border-color:      #ccc !default;
 
 $o-table--fixed:     false !default;
-$o-table--compact:   false !default;
-$o-table--cosy:      false !default;
-$o-table--comfy:     false !default;
+$o-table--tiny:      false !default;
+$o-table--small:     false !default;
+$o-table--flush:     false !default;
 $o-table--cells:     false !default;
 $o-table--rows:      false !default;
 $o-table--columns:   false !default;
@@ -45,9 +45,13 @@ $o-table--columns:   false !default;
 
 .o-table {
     width: 100%;
+
+	th,
+	td {
+		padding: $o-table-padding;
+	}
+
 }
-
-
 
 
 
@@ -66,16 +70,16 @@ $o-table--columns:   false !default;
 
 
 
-@if ($o-table--compact == true) {
+@if ($o-table--tiny == true) {
 
     /**
      * Tables with very tightly packed cells.
      */
-    .o-table--compact {
+    .o-table--tiny {
 
         th,
         td {
-            padding: $o-table-padding--compact;
+            padding: $o-table-padding--tiny;
         }
 
     }
@@ -86,16 +90,16 @@ $o-table--columns:   false !default;
 
 
 
-@if ($o-table--cosy == true) {
+@if ($o-table--small == true) {
 
     /**
      * Lightly packed cells.
      */
-    .o-table--cosy {
+    .o-table--small {
 
         th,
         td {
-            padding: $o-table-padding--cosy;
+            padding: $o-table-padding--small;
         }
 
     }
@@ -106,16 +110,16 @@ $o-table--columns:   false !default;
 
 
 
-@if ($o-table--comfy == true) {
+@if ($o-table--flush == true) {
 
     /**
-     * Tables with very widely padded cells.
+     * Tables without padding
      */
-    .o-table--comfy {
+    .o-table--flush {
 
         th,
         td {
-            padding: $o-table-padding--comfy;
+            padding: 0;
         }
 
     }
@@ -129,7 +133,7 @@ $o-table--columns:   false !default;
 @if ($o-table--cells == true) {
 
     /**
-     * Add borders around a `table`.
+     * Add borders around a `table`’s cells.
      */
     .o-table--cells {
 
