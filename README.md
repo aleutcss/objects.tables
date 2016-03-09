@@ -28,6 +28,8 @@ Basic usage of the table object uses the required class:
 </table>
 ```
 
+![Example of o-table](https://github.com/aleutcss/Aleut/tree/gh-pages/public/img/o-table.png)
+
 ## Options
 
 Other, optional classes can supplement the required base classes:
@@ -58,6 +60,8 @@ For example:
 	</tr>
 </table>
 ```
+
+![Example of o-table options](https://github.com/aleutcss/Aleut/tree/gh-pages/public/img/o-table-options.png)
 
 ### Enable options
 To enable the optional classes set the variables to `true` before you import
