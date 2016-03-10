@@ -5,7 +5,7 @@ aleutcss has some useful helpers for common table patterns.
 ## Install using npm:
 
 ```ssh
-    $ npm install --save-dev aleut-tables
+    $ npm install --save-dev @aleut/objects.tables
 ```
 
 ## Usage
